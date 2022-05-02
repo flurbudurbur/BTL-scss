@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+
+    <?php $page = 'home' ;?>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +17,20 @@
 
 <body>
     <header>
-        <!-- LOGO -->
-            <h1>LOGO HERE</h1>
-            <div class="btn">
-                <a href="#">Reserveren</a>
-                <a href="#">booking</a>
-                <a href="#">Login</a>
-            </div>
+        <h1>Techlab Regius College</h1>
+        <div class="btn">
+            <a class="<?php if ($page == 'home') {echo 'active';} ;?>" href="index.php">Home</a>
+            <a class="" href="#">Reserveren</a>
+            <a class="" href="#">booking</a>
+            <a class="" href="#">Login</a>
+        </div>
     </header>
+    <main>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quod ab fuga amet nemo iste aliquam reprehenderit illo temporibus ullam! Cumque, facere quae? Unde, excepturi vero? Enim non rerum aliquid harum dignissimos?</p>
-</body>
+    </main>
+    <footer>
+        
+    </footer>
+    </body>
 
 </html>

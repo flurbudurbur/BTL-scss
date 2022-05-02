@@ -24,177 +24,60 @@
     --bg-color: rgb(16, 0, 72);
     --text-color: aqua;
     --hili-1: rgb(149, 191, 11);
-    --hili-1-dark: rgb(99, 128, 11);
+    --hili-1-dark: rgb(226, 128, 36);
 }
 
 body {
     margin: 0;
     min-height: 100%;
-    background-color: var(--bg-color)
+    background-color: var(--bg-color);
+    font-family: 'Rubik', sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 
-/* header {
+header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-} */
-
-div.btn a {
-    text-decoration: none
-    background-color: var(--hili-1)
-    padding: 10%
+    justify-content: space-around;
 }
 
-
-/* Nav Bar Start*/
-
-.headernavigation {
-    height: 80px;
-    font-family: 'Rubik', sans-serif;
-    background-color: var(--hili-1);
-    border-bottom: 10px solid var(--hili-1-dark);
-    transition: height 0.25s ease-in-out;
-    position: relative;
-}
-
-.headernavigation-open {
-    height: 350px;
-    transition: height 0.25s ease-in-out;
-}
-
-#btnContainer {
-    height: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.btn {
+    width: 25%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-}
-
-.LOGO_li {
-    flex-grow: 1;
-}
-
-.LOGO {
-    max-width: 50px;
-    max-height: 50px;
-}
-
-#btnContainer li {
-    float: left;
-    padding: 10px 20px;
-}
-
-#btnContainer li>a,
-.dropbtn {
-    display: inline-block;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-}
-
-
-/* -------------------- */
-
-
-/* #btnContainer li .btn:not(.active)::before {
-    content: "";
-    height: 2px;
-    width: 0%;
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    background-color: var(--Nav-Text-Color);
-    transition: width 0.25s ease-in-out;
-}
-
-#btnContainer li .btn:not(.active):hover::before {
-    width: 100%;
-} */
-
-
-/* -------------------- */
-
-.dropdown-content {
-    display: none;
-    border-radius: 5px;
-    position: absolute;
-    background-color: var(--hili-1);
-    min-width: 160px;
-    box-shadow: 5px 8px 10px 0px black;
-    margin: 10px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    display: inline-block;
-    padding: 12px 16px;
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
-    text-align: left;
-    position: relative;
-    width: 100%;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--hili-1-dark);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-#expand-menu {
-    display: none;
-}
-
-#expand-menu>span {
-    content: 'wwww';
-}
-
-/* Nav Bar End*/
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-    .LOGO_li {
-        flex-grow: 0.5;
+    a,
+    a:focus {
+        font-size: 1rem;
+        text-decoration: none;
+        background-color: var(--hili-1);
+        padding: 1em;
+        border-radius: .5em;
+        box-shadow: .25em .25em var(--hili-1-dark);
+        transition: box-shadow 100ms linear, transform 100ms linear;
+        transform: none;
     }
-
-    #btnContainer {
-        flex-direction: column;
+    a:hover,
+    a:hover:focus {
+        box-shadow: .6em .6em var(--hili-1-dark);
+        transform: translate(-.2em,-.2em);
     }
-
-    #expand-menu {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        margin: 0;
-        padding: 0;
+    a.active {
+        box-shadow: .6em .6em var(--hili-1-dark);
+        transform: translate(-.2em,-.2em);
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {}
+main {
+    margin: 0px 7vw;
+    background-color: orange;
+    height: 100vh;
+}
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+footer {
+    height: none;
+}
