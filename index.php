@@ -14,15 +14,13 @@
 
 <body>
     <header>
-        <?php require_once $_SERVER["DOCUMENT_ROOT"] . '/php/inc/header.inc.php' ?>
-
-        <!-- LOGO
+        <!-- LOGO -->
             <h1>LOGO HERE</h1>
             <div class="btn">
                 <a href="#">Reserveren</a>
                 <a href="#">booking</a>
                 <a href="#">Login</a>
-            </div> -->
+            </div>
     </header>
 
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quod ab fuga amet nemo iste aliquam reprehenderit illo temporibus ullam! Cumque, facere quae? Unde, excepturi vero? Enim non rerum aliquid harum dignissimos?</p>
