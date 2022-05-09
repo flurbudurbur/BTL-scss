@@ -22,7 +22,7 @@
 
 :root {
     --bg-color: rgb(16, 0, 72);
-    --text-color: aqua;
+    --text-color: white;
     --hili-1: rgb(149, 191, 11);
     --hili-1-dark: rgb(226, 128, 36);
 }
@@ -62,7 +62,7 @@ header {
         transform: none;
     }
     a:hover,
-    a:hover:focus {
+    a:focus:hover {
         box-shadow: .6em .6em var(--hili-1-dark);
         transform: translate(-.2em,-.2em);
     }
