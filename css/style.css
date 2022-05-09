@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --bg-color: rgb(16, 0, 72);
-  --text-color: aqua;
+  --text-color: white;
   --highlight1: rgb(149, 191, 11);
   --highlight1-dark: rgb(226, 128, 36);
   --highlight2: hotpink;
@@ -32,13 +32,9 @@ header {
 }
 
 .btn {
-  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -49,13 +45,14 @@ header {
   text-decoration: none;
   background-color: var(--highlight1);
   padding: 1em;
+  margin: 0 0.6vw;
   border-radius: 0.5em;
   -webkit-box-shadow: 0.25em 0.25em var(--highlight1-dark);
           box-shadow: 0.25em 0.25em var(--highlight1-dark);
-  -webkit-transition: -webkit-box-shadow 100ms linear, -webkit-transform 100ms linear;
-  transition: -webkit-box-shadow 100ms linear, -webkit-transform 100ms linear;
-  transition: box-shadow 100ms linear, transform 100ms linear;
-  transition: box-shadow 100ms linear, transform 100ms linear, -webkit-box-shadow 100ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: -webkit-box-shadow 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  transition: -webkit-box-shadow 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  transition: box-shadow 100ms ease-in-out, transform 100ms ease-in-out;
+  transition: box-shadow 100ms ease-in-out, transform 100ms ease-in-out, -webkit-box-shadow 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
   -webkit-transform: none;
           transform: none;
 }
