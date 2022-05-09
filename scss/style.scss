@@ -1,30 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ICON SIZES */
-
-.material-icons.md-18 {
-    font-size: 18px;
-}
-
-.material-icons.md-24 {
-    font-size: 24px;
-}
-
-.material-icons.md-36 {
-    font-size: 36px;
-}
-
-.material-icons.md-48 {
-    font-size: 48px;
-}
-
-/* ICON SIZES END */
-
 :root {
     --bg-color: rgb(16, 0, 72);
     --text-color: aqua;
-    --hili-1: rgb(149, 191, 11);
-    --hili-1-dark: rgb(226, 128, 36);
+
+    // highlights
+         --highlight1: rgb(149, 191, 11);
+    --highlight1-dark: rgb(226, 128, 36);
+         --highlight2: hotpink;
+    --highlight2-dark: rgb(185, 51, 118);
 }
 
 body {
@@ -50,34 +34,77 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     a,
     a:focus {
         font-size: 1rem;
         text-decoration: none;
-        background-color: var(--hili-1);
+        background-color: var(--highlight1);
         padding: 1em;
         border-radius: .5em;
-        box-shadow: .25em .25em var(--hili-1-dark);
+        box-shadow: .25em .25em var(--highlight1-dark);
         transition: box-shadow 100ms linear, transform 100ms linear;
         transform: none;
     }
+
     a:hover,
     a:hover:focus {
-        box-shadow: .6em .6em var(--hili-1-dark);
-        transform: translate(-.2em,-.2em);
+        box-shadow: .6em .6em var(--highlight1-dark);
+        transform: translate(-.2em, -.2em);
     }
+
     a.active {
-        box-shadow: .6em .6em var(--hili-1-dark);
-        transform: translate(-.2em,-.2em);
+        box-shadow: .6em .6em var(--highlight1-dark);
+        transform: translate(-.2em, -.2em);
     }
 }
 
 main {
     margin: 0px 7vw;
-    background-color: orange;
-    height: 100vh;
 }
 
-footer {
-    height: none;
+.slideshow {
+    position: relative;
+
+    @for $i from 1 through 4 {
+        div:nth-child(n + #{$i}) {
+            transform: translate(($i*3em),($i*3em));
+            transition: transform 200ms ease-in-out;
+        }
+    }
+}
+
+.slide, img, p {
+    border-radius: 2rem;
+    position: absolute;
+    width: 30em;
+    height: 20em;
+}
+
+.slide {
+    background-color: black;
+
+    img {
+        object-fit: cover;
+        opacity: 1;
+        transition: opacity 200ms linear;
+    }
+    p {
+        display: grid;
+        text-align: center;
+        align-content: center;
+        opacity: 0;
+        transition: opacity 200ms linear;
+        user-select: none;
+    }
+}
+
+.slide:hover {
+    background-color: black;
+    img {
+        opacity: 0.4;
+    }
+    p {
+        opacity: 1;
+    }
 }

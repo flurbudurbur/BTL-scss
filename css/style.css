@@ -1,27 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* ICON SIZES */
-.material-icons.md-18 {
-  font-size: 18px;
-}
-
-.material-icons.md-24 {
-  font-size: 24px;
-}
-
-.material-icons.md-36 {
-  font-size: 36px;
-}
-
-.material-icons.md-48 {
-  font-size: 48px;
-}
-
-/* ICON SIZES END */
 :root {
   --bg-color: rgb(16, 0, 72);
   --text-color: aqua;
-  --hili-1: rgb(149, 191, 11);
-  --hili-1-dark: rgb(226, 128, 36);
+  --highlight1: rgb(149, 191, 11);
+  --highlight1-dark: rgb(226, 128, 36);
+  --highlight2: hotpink;
+  --highlight2-dark: rgb(185, 51, 118);
 }
 
 body {
@@ -63,11 +47,11 @@ header {
 .btn a:focus {
   font-size: 1rem;
   text-decoration: none;
-  background-color: var(--hili-1);
+  background-color: var(--highlight1);
   padding: 1em;
   border-radius: 0.5em;
-  -webkit-box-shadow: 0.25em 0.25em var(--hili-1-dark);
-          box-shadow: 0.25em 0.25em var(--hili-1-dark);
+  -webkit-box-shadow: 0.25em 0.25em var(--highlight1-dark);
+          box-shadow: 0.25em 0.25em var(--highlight1-dark);
   -webkit-transition: -webkit-box-shadow 100ms linear, -webkit-transform 100ms linear;
   transition: -webkit-box-shadow 100ms linear, -webkit-transform 100ms linear;
   transition: box-shadow 100ms linear, transform 100ms linear;
@@ -77,24 +61,96 @@ header {
 }
 .btn a:hover,
 .btn a:hover:focus {
-  -webkit-box-shadow: 0.6em 0.6em var(--hili-1-dark);
-          box-shadow: 0.6em 0.6em var(--hili-1-dark);
+  -webkit-box-shadow: 0.6em 0.6em var(--highlight1-dark);
+          box-shadow: 0.6em 0.6em var(--highlight1-dark);
   -webkit-transform: translate(-0.2em, -0.2em);
           transform: translate(-0.2em, -0.2em);
 }
 .btn a.active {
-  -webkit-box-shadow: 0.6em 0.6em var(--hili-1-dark);
-          box-shadow: 0.6em 0.6em var(--hili-1-dark);
+  -webkit-box-shadow: 0.6em 0.6em var(--highlight1-dark);
+          box-shadow: 0.6em 0.6em var(--highlight1-dark);
   -webkit-transform: translate(-0.2em, -0.2em);
           transform: translate(-0.2em, -0.2em);
 }
 
 main {
   margin: 0px 7vw;
-  background-color: orange;
-  height: 100vh;
 }
 
-footer {
-  height: none;
+.slideshow {
+  position: relative;
+}
+.slideshow div:nth-child(n+1) {
+  -webkit-transform: translate(3em, 3em);
+          transform: translate(3em, 3em);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+.slideshow div:nth-child(n+2) {
+  -webkit-transform: translate(6em, 6em);
+          transform: translate(6em, 6em);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+.slideshow div:nth-child(n+3) {
+  -webkit-transform: translate(9em, 9em);
+          transform: translate(9em, 9em);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+.slideshow div:nth-child(n+4) {
+  -webkit-transform: translate(12em, 12em);
+          transform: translate(12em, 12em);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.slide, img, p {
+  border-radius: 2rem;
+  position: absolute;
+  width: 30em;
+  height: 20em;
+}
+
+.slide {
+  background-color: black;
+}
+.slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1;
+  -webkit-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+}
+.slide p {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.slide:hover {
+  background-color: black;
+}
+.slide:hover img {
+  opacity: 0.4;
+}
+.slide:hover p {
+  opacity: 1;
 }
